@@ -1,0 +1,16 @@
+ul li{
+    list-style-type: none;
+    float: left;
+}
+a{
+    padding: 10px 20px;
+    background-color: #6B728E;
+}
+a:link, a:visited {
+    color:black;
+    text-decoration: none;
+}
+a:hover {
+    background-color:#000;
+    color:#fff;
+}
