@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기초 실습2</title>
+</head>
+
+<body>
+    <fieldset style="border:1px solid red">
+        <legend>보기</legend>
+        <label id="la1">이름 : </label> <input type="text" id="id" placeholder="아이디를 입력하세요" /><br>
+        <label id="la2">pass : </label> <input type="text" id="pwd" placeholder="비밀번호를 입력하세요" /><br>
+        <label id="la3">name : </label> <input type="text" id="name" placeholder="비밀번호를 입력하세요" /><br>
+        <label id="la4">addr : </label> <input type="text" id="addr" placeholder="주소를 입력하세요" /><br>
+    </fieldset>
+    <br><br><br>
+
+    <script>
+        // 문제1 : 보기에 있는 "이름 : " -> "ID : " 으로 변경 되도록 하여라.
+        document.querySelector("#la1").innerHTML = "ID :";
+
+        // 문제2 : 현재는 패스워드 입력시 비밀번호가 노출되는 형태이다. 
+        //비밀번호 입력시 비밀번호가 노출되지 않도록 만들어라.
+        document.querySelector("#pwd").type = "password";
+
+        // 문제3 : name의 기본 노출값이 이상하다.! 기본 노출값이 "비밀번호를 입력하세요"가 아닌
+        // "이름을 입력하세요"로 변경하시오
+        document.querySelector("#name").placeholder = "이름을 입력하세요.";
+
+        //문제4 : addr의 주소 입력창이 너무 짧다! 최대 50글자를 입력할 수 있도록
+        // 입력바를 길게 만들어라.
+        document.querySelector("#addr").size = "50";
+
+        // 문제5 : 보기에 있는 필드에 내용을 작성하고
+        // 작성된 내용을 모두 가져와서 alert창에 출력하시오
+        // 단, getElementById를 사용하지 말고 처리하시오 
+        /*
+        ex)
+        ID : XXX 
+        PW : XXXXXX 
+        이름 : XXX 
+        주소 : XXXXXXXX 
+        */
+        // input태그에 값을 입력하고 버튼을 누르면 입력한 값이 alert창으로 띄워라!
+        // javascript로 input태그에 값을 각각 넣어줌
+        // - 새로고침 했을때 값이 들어가 있음.
+        document.querySelector("#id").value = "khuser01";
+        document.querySelector("#pwd").value = "pass01";
+        document.querySelector("#name").value = "일용자";
+        document.querySelector("#addr").value = "서울시 중구";
+        //값이 들어가 있는 input태그를 선택함
+        //배열로 저장되므로 index로 접근 가능
+        var inputTags = document.querySelectorAll("input");
+        //첫번째 인덱스 0, id값
+        // inputTags[0]는 id가 id인 input태그이며
+        // .을 붙여서 value속성으로 input태그에 value 속성을 가져옴
+        // =을 기준으로 값이 되어 idVal변수에 들어감
+        // idVal변수는 alert 소괄호 안에 사용되어 alert창에 출력됨
+        var idVal = inputTags[0].value;
+        // 두번째 인덱스 1, password값
+        var password = inputTags[1].value;
+        // 세번째 인덱스 2, name값
+        var name = inputTags[2].value;
+        //네번째 인덱스 3, address값
+        var address = inputTags[3].value;
+        alert("ID : " + idVal + "\nPW : " + password + "\nNAME : " + name + "\nADDR : " + address);
+    </script>
+</body>
+
+</html>

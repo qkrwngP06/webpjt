@@ -1,0 +1,141 @@
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.main-img{
+    width: 95%;
+    height: 90%;
+    margin-left: 8px;
+}
+.img-caption{
+    text-align: center;
+    line-height: 1;
+}
+#container{
+    width: 1000px;
+    margin: 0 auto;
+}
+#header{
+    width: 100%;
+    height: 100px;
+}
+    #header-layer1{
+        width: 17%;
+        height: 100%;
+        --padding: 10px;
+        float: left;
+    }
+    #header-layer2{
+        width: 55%;
+        height: 100%;
+        --padding: 15px;
+        float: left;
+    }
+
+#nav{
+    height: 50px;
+    --background-color: azure;
+}
+    ul{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    ul li{
+        list-style-type: none;
+        float: left;
+        width: 25%;
+        text-align: center;
+        line-height: 50px;
+        background-color: #65AC1A;
+        --color: white;
+    }
+    a{
+        text-decoration: none;
+        font-family: "고딕체";
+    }
+    li a:link{
+        color: white;
+    }
+    li a:visited{
+        color: white;
+    }
+#main{
+    height: 500px;
+    --background-color: bisque;
+}
+    #main-layer1{
+        width: 19%;
+        height: 100%;
+        background-image: url(../imges/left_img.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        float: left;
+    }
+    #main-layer2{
+        width: 60%;
+        height: 100%;
+        float: left;
+        --background-color: beige;
+    }
+        #img-top{
+            width: 100%;
+            height: 50%;
+        }
+            #top-left{
+                height: 100%;
+                width: 50%;
+                float: left;
+            }
+            #top-right{
+                height: 100%;
+                width: 50%;
+                float: left;
+            }
+        #img-bottom{
+            height: 50%;
+        }
+            #bottom-left{
+                height: 100%;
+                width: 50%;
+                float: left;
+            }
+            #bottom-right{
+                height: 100%;
+                width: 50%;
+                float: left;
+            }
+    #main-layer3{
+        width: 21%;
+        height: 100%;
+        float: left;
+        --background-color: blanchedalmond;
+    }
+        #aside-top{
+            width: 100%;
+            height: 17%;
+        }
+            button{
+                padding: 8px 3px;
+            }
+            #text-area{
+                text-align: center;
+            }
+        #aside-mid{
+            height: 52%;
+            background-image: url(../imges/right_img.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        #aside-bottom{
+            height: 33%;
+            background-image: url(../imges/me_chat.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+#footer{
+    height: 100px;
+
+}
